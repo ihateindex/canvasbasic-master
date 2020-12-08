@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      canvas {
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas class="canvas" width="600" height="400">이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
+
+    <script>
+      // beginPath
+      // moveTo
+      // lineTo
+      // closePath
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+
+      // context.beginPath();
+      // context.moveTo(100, 100);
+      // context.lineTo(300, 200);
+      // context.stroke();
+      // context.closePath();
+      // // context.fill();
+
+      // beginPath로 선의 시작을 알림
+      context.beginPath();
+      // 캔버스에 그림을 그릴 붓을 해당 위치로 옮긴다.
+      context.moveTo(100, 100);
+      // 그릴 라인의 패스를 지정
+      context.lineTo(300, 200);
+      // 지정된 패스의 라인을 그림
+      context.stroke();
+      // 패스의 끝을 알림, 일러스트에서 패스로 점을 찍어서 그림을 그리다가 끝을 맺지 않으면 계속 이어지는 것처럼 begin과 close를 해주지 않으면 동일한 문제 발생
+      context.closePath();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
